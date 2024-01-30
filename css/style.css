@@ -1,57 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
-/*
-Färgförslag 1, grafisk design!
-background-color: #1C1C1C;
-background-color: #23714D;
-background-color: #F1CCBA;
-
-Färgförslag 2, grafisk design!
-background-color: #104B53;
-background-color: #D99B5E;
-background-color: #FAD9B8;
-*/
-
-*{/*Padding och margin 0 för hela dokumentet. Borderboxen gör att värdet på padding och border inkluderas i själva boxarna*/
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/*:root{
-    scroll-behavior: smooth;
-}*/
-
-header, section, footer, nav, figure {/*Ser till att äldre browsers inte visar semantiska element som inline*/
-    display: block;
+:root{
+    font-size: 65.2%;
+    font: lato, sans-serif;
+    --white: #ffffff;
+    --gold: rgb(152, 128, 67);
+    --hover: rgb(209, 191, 147);
+    --blue: rgb(22, 87, 141);
+    --red: rgb(152, 67, 85);
 }
 
-body{/*alla element i bodyn flexas som kollumn och bakgrundsfärgen är vit*/
+header, section, footer, nav, figure {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+body{
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--white);
 }
 
 /*DROPDOWN MENU*/
-.dropdown {/*Menyn överst på sidan. Döpt till dropdown då den fungerar som sådan på vissa skärmar*/
+.dropdown {
     display: flex;
     justify-content: center;
     width: 100%;
     height: auto;
     padding: 5px;
     font-family: lato, arial, sans-serif;
-    font-size: 5vw;
+    font-size: 3rem;
     text-transform: uppercase;
-    background-color: rgb(152, 128, 67);
-    /*background-color: rgb(146, 112, 24); GAMMAL FÄRG FOR REFERENCE*/
+    background-color: var(--gold);
 }
 
-.icon{ /*En sådan där hamburgermeny-ikon. Tre divs ovanpå varandra.*/
+.icon{
     width: 45px;
     height: 5px;
-    background-color: rgb(222, 227, 231);
+    background-color: var(--white);
     margin: 6px;
-    border-radius: 3%;
+    border-radius: 10px;
 }
 
 li{
@@ -60,27 +55,27 @@ li{
 }
 
 a:link{
-    color: rgb(222, 227, 231);
+    color: var(--white);
     text-decoration: none;
 }
 
 a:visited{
-    color: rgb(22, 87, 141);
+    color: var(--blue);
 }
 
 a:hover{
-    color: rgb(209, 191, 147);
+    color: var(--hover);
     font-style: italic;
 }
   
-.dropdown-list {/*Dropdownmenyn är inte synlig på skärmbreddar över 901px och uppåt*/
+.dropdown-list {
     display: none;
     position: absolute;
     text-align: center;
     min-width: 100%;
     padding: 20px 16px;
     z-index: 1;
-    background-color: rgb(152, 128, 67);
+    background-color: var(--gold);
 }
   
 .dropdown:hover .dropdown-list {
@@ -89,7 +84,7 @@ a:hover{
 
 
 /*HERO CAROUSEL*/
-.hero-carousel{/*Här var tanken att det skulle vara en sån där "karusell" som skiftar bilder. Men jag är inte mentalt där ännu i js så fick bli en enkel bild istället. Class-namnet får vara kvar till senare*/
+.hero-carousel{
     width: 100%;
     height: auto;
     display: flex;
@@ -125,69 +120,41 @@ main{
 }
 
 
-/*BOOKING*/
 
-
+/*BOOKING BUTTON*/
 .link-btn{
-    background-color: rgb(152, 67, 85);
+    background-color: var(--red);
     border: none;
-    color: rgb(222, 227, 231);
+    color: var(--white);
     padding: 25px 55px 25px 55px;
     text-decoration: none;
     display: inline-block;
-    font-size: 4vw;
-    border-radius: 4%;
+    font-size: 2rem;
+    border-radius: 10px;
     transition-duration: 0.4s;
     text-transform: uppercase;
     cursor: pointer;
     max-width: 300px;
     max-height: auto;
 }
-
-/*.booking-btn{ Elementet under "booking" fungerade som en knapp först, sedan en form control. Låter båda stylesen vara kvar som referens för ig själv.
-    display: flex;
-    justify-content: center;
-}
-
-.booking-btn button{
-    background-color: rgb(152, 67, 85);
-    border: none;
-    color: rgb(222, 227, 231);
-    padding: 25px 55px 25px 55px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 4vw;
-    border-radius: 4%;
-    transition-duration: 0.4s;
-    text-transform: uppercase;
-    cursor: pointer;
-    max-width: 300px;
-    max-height: auto;
-}
-
-.booking-btn button:hover{
-    color: rgb(209, 191, 147);
-}*/
-
 
 input[type=submit]{
-    background-color: rgb(152, 67, 85);
+    background-color: var(--red);
     border: none;
-    color: rgb(222, 227, 231);
+    color: var(--white);
     padding: 25px 55px 25px 55px;
     text-decoration: none;
     display: inline-block;
-    font-size: 4vw;
-    border-radius: 4%;
+    font-size: 3rem;
+    border-radius: 10px;
     transition-duration: 0.4s;
     text-transform: uppercase;
     margin-bottom: 20px;
     max-width: 300px;
-    /*max-height: auto;*/
 }
 
 input[type=submit]:hover{
-    color: rgb(209, 191, 147);
+    color: var(--gold);
     cursor: pointer;
 }
 
@@ -204,14 +171,13 @@ blockquote{
     max-width: 600px;
     margin: 20px;
     padding: 25px;
+    border-radius: 10px;
     background-color: rgba(146, 112, 24, 0.163);
-    border-radius: 1%;
     border: 1px solid rgb(146, 112, 24);
     color:rgb(146, 112, 24);
 }
 
 .quote{
-    /*font-family: ;*/
     font-style: italic;
     font-size: 1.15em;
     line-height: 1.5;
@@ -256,9 +222,9 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5px 0 5px 0;
+    padding: 10px 0 5px 0;
     line-height: 1.5;
-    font-size: 3vw;
+    font-size: 1rem;
 }
 
 .line{
@@ -276,7 +242,7 @@ footer{
 }
 
     .link-btn{
-        font-size: 1vw;
+        font-size: 3rem;
     }
 
     .hero-carousel img{
@@ -296,12 +262,12 @@ footer{
     }
 
     footer{
-        max-height: 200px;
-        font-size: 1vw;
+        max-height: 300px;
+        font-size: 2rem;
     }
 
     .dropdown{
-        font-size: 2vw;
+        font-size: 3rem;
         width: 100%;
         height: auto;
     }
@@ -315,7 +281,7 @@ footer{
 
     .dropdown-list ul{
         display: flex;
-        border-radius: 20px;
+        border-radius: 10px;
     }
 
     .dropdown-list li{
