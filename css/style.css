@@ -233,12 +233,8 @@ footer{
 }
 
 @media screen and (min-width: 900px) {
-    /*.booking-btn button{
-        font-size: 2vw;
-    }*/
-
     input[type=submit]{
-        font-size: 1vw;
+        font-size: 2rem;
 }
 
     .link-btn{
