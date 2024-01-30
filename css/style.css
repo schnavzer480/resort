@@ -35,7 +35,7 @@ body{
     width: 100%;
     height: auto;
     padding: 5px;
-    font-family: lato, arial, sans-serif;
+    font-family: lato, sans-serif;
     font-size: 3rem;
     text-transform: uppercase;
     background-color: var(--gold);
@@ -268,7 +268,7 @@ footer{
         height: auto;
     }
 
-    .dropdown-list{/*Gör dropdown-listan "synlig"*/
+    .dropdown-list{
         position: static;
         display: flex;
         justify-content: center;
