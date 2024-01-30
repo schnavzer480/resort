@@ -6,17 +6,27 @@
     box-sizing: border-box;
 }
 
-header, section, footer, aside, nav, article, figure {
-    display: block;
+:root{
+    font-size: 65.2%;
+    font: lato, sans-serif;
+    --white: #ffffff;
+    --gold: rgb(152, 128, 67);
+    --hover: rgb(209, 191, 147);
+    --blue: rgb(22, 87, 141);
+    --red: rgb(152, 67, 85);
 }
 
+header, section, footer, nav, figure {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
 
 body{
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--white);
 }
-
 
 /*DROPDOWN MENU*/
 .dropdown {
@@ -25,19 +35,18 @@ body{
     width: 100%;
     height: auto;
     padding: 5px;
-    font-family: lato, arial, sans-serif;
-    font-size: 5vw;
-    background-color: rgb(152, 128, 67);
-    /*background-color: rgb(146, 112, 24); GAMMAL FÄRG FOR REFERENCE*/
+    font-family: lato, sans-serif;
+    font-size: 3rem;
     text-transform: uppercase;
+    background-color: var(--gold);
 }
 
 .icon{
     width: 45px;
     height: 5px;
-    background-color: rgb(222, 227, 231);
+    background-color: var(--white);
     margin: 6px;
-    border-radius: 3%;
+    border-radius: 10px;
 }
 
 li{
@@ -46,16 +55,16 @@ li{
 }
 
 a:link{
-    color: rgb(222, 227, 231);
+    color: var(--white);
     text-decoration: none;
 }
 
 a:visited{
-    color: rgb(22, 87, 141);
+    color: var(--blue);
 }
 
 a:hover{
-    color: rgb(209, 191, 147);
+    color: var(--hover);
     font-style: italic;
 }
   
@@ -66,7 +75,7 @@ a:hover{
     min-width: 100%;
     padding: 20px 16px;
     z-index: 1;
-    background-color: rgb(152, 128, 67);
+    background-color: var(--gold);
 }
   
 .dropdown:hover .dropdown-list {
@@ -110,7 +119,7 @@ a:hover{
 
 .about-text{
     font-style: normal;
-    font-size: 1.15em;
+    font-size: 1.5rem;
     line-height: 1.5;
     margin: 0;
     display: flex;
@@ -130,14 +139,13 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5px 0 5px 0;
+    padding: 10px 0 5px 0;
     line-height: 1.5;
-    font-size: 3vw;
+    font-size: 1rem;
 }
 
 .line{
     width: 40px;
-    height: auto;
     margin-top: 10px;
 }
 
@@ -152,12 +160,12 @@ footer{
     }
 
     footer{
-        max-height: 200px;
-        font-size: 1vw;
+        max-height: 300px;
+        font-size: 2rem;
     }
 
     .dropdown{
-        font-size: 2vw;
+        font-size: 3rem;
         width: 100%;
         height: auto;
     }
@@ -171,7 +179,7 @@ footer{
 
     .dropdown-list ul{
         display: flex;
-        border-radius: 20px;
+        border-radius: 10px;
     }
 
     .dropdown-list li{
